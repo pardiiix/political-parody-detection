@@ -45,8 +45,6 @@ else:
     device = torch.device("cpu")
 
 
-combine_all_data()
-
 
 root_path = './'
 gender_path = f'{root_path}gender/'
@@ -55,7 +53,7 @@ test_on_f_path = f'{gender_path}test_on_female/'
 #testing on male path
 test_on_m_path = f'{gender_path}test_on_male/'
 
-
+combine_all_data()
 
 #creating pandas df of male train and dev set, and female test set
 male_train_df = create_pandas_df(test_on_f_path, "male_train.txt")
